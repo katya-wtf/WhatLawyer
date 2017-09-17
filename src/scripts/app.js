@@ -42,9 +42,9 @@ var Qindex ="q";
 
 function A() {
 
-  if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACA" ) {
+  if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACA" || Qindex == "qB", Qindex == "qAB") {
 
-    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you. \r\n Refresh to return to the start"
+    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
@@ -74,9 +74,9 @@ function A() {
 
 function B() {
 
-    if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACB") {
+    if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACB" || Qindex == "qB" || Qindex == "qABB") {
 
-    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you."
+    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
@@ -102,9 +102,9 @@ function B() {
 
 function C() {
 
-    if (Qindex == "qAA" || Qindex == "qACC") {
+    if (Qindex == "qAA" || Qindex == "qACC" || Qindex == "qB") {
 
-    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you."
+    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
@@ -121,7 +121,7 @@ function C() {
 
   else if (Qindex == "qABA") {
 
-    document.getElementById("Q").innerHTML =  "Based on what you have told us, we suggest you speak to a Tax Lawyer. We reccommend you speak to XX"
+    document.getElementById("Q").innerHTML =  "Based on what you have told us, we suggest you speak to a Tax Lawyer."
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('B');
@@ -149,9 +149,9 @@ function C() {
 
 function D() {
 
-    if (Qindex == "qAA" || Qindex == "qAB"|| Qindex == "qABD" || Qindex == "qACD"  ) {
+    if (Qindex == "qAA" || Qindex == "qAB"|| Qindex == "qABD" || Qindex == "qACD" || Qindex == "qB" ) {
 
-    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you."
+    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
