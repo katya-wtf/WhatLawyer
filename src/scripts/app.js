@@ -42,7 +42,7 @@ var Qindex ="q";
 
 function A() {
 
-  if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACA" || Qindex == "qB", Qindex == "qAB") {
+  if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACA" || Qindex == "qB"|| Qindex == "qAB") {
 
     document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
@@ -74,7 +74,7 @@ function A() {
 
 function B() {
 
-    if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACB" || Qindex == "qB" || Qindex == "qABB") {
+    if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACB" || Qindex == "qB" || Qindex == "qAB") {
 
     document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
@@ -102,7 +102,7 @@ function B() {
 
 function C() {
 
-    if (Qindex == "qAA" || Qindex == "qACC" || Qindex == "qB") {
+    if (Qindex == "qAA" || Qindex == "qACC" || Qindex == "qB" || Qindex == "qAB") {
 
     document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
@@ -149,7 +149,7 @@ function C() {
 
 function D() {
 
-    if (Qindex == "qAA" || Qindex == "qAB"|| Qindex == "qABD" || Qindex == "qACD" || Qindex == "qB" ) {
+    if (Qindex == "qAA" || Qindex == "qAB"|| Qindex == "qABD" || Qindex == "qACD" || Qindex == "qB" || Qindex == "qAB" ) {
 
     document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
