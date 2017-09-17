@@ -3,35 +3,21 @@ var questionsB = new Array('Is your problem personal or corporate?', 'goodbye', 
 
 var dict = {
       q: "Are you looking for a lawyer for a person or a company?",
-    qA: "Does this have to do with:",
-    qAA: "Does this have to do with your: ",
-    qAB: "Are you a:",
-    qABA: "Is your problem with:",
-    qAC:" Is this about:",
-    qACA: "Is this about your:",
-    qACAA: "Do you own or rent your residence? ",
-    qACAAA:"Do you have a problem with your:",
-
-    qACAAAD: " Do you have a problem with your:",
-    qB: "Is your company registered as an:",
+    qA: "What is your issue related to?",
+    qB: "What is your issue related to? ",
+    qC: "What is your issue related to?",
+    qD: "What is your issue related to?",
+    
 
 
   
 };
 
 var dict2 = {
-    q: "Are you looking for a lawyer for a person or a company?",
-    qA: new Array("Family","Work","Property", "Other"),
-    qAA:  new Array("Spouse/ Partner","Children", "Parents", "Other"),	
-    qAB: new Array("Full-time employee", "Temporary or parttime", "Independent Contractor", "Other"),
-    qABA: new Array("Salary or Benefits","Getting fired or laid off","Taxes","Others"),
-    qAC: new Array("Your property","Someone else's property","A disagreement about that","Others"),
-    qACA: new Array("Residence","Car","Land","Other"),
-    qACAA: new Array("Own","Rent","Both","Other"),
-    qACAAA: new Array("Ownership/title"," An insurance claim","Construction","Other"),
-    qACAAAD: new Array("Land","Neighbors","Municipal authorities","Others"),
-    qB: new Array("Limited liability company","Sole proprietorship","Not registered","Ohers"),
-
+    qA: new Array("Taxes","Pay","Got Fired", "Harassment"),
+    qB:  new Array("Divorce","Child Custody", "Spousal Abuse", "Inheritance"),	
+    qC: new Array("Ownership", "Landlord", "Taxes", "Insurance"),
+    qD: new Array("Registration","Protecting your ideas","Taxes","An Employee"),
 
 };
 
@@ -42,10 +28,14 @@ var Qindex ="q";
 
 function A() {
 
-  if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACA" || Qindex == "qB"|| Qindex == "qAB") {
+   Qindex = Qindex + "A"
+    
 
-    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
+  if (Qindex == "qAA") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a tax lawyer."
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('B');
@@ -54,74 +44,83 @@ function A() {
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('D');
     elem.parentNode.removeChild(elem);
-    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
+
 
 
   }
 
+    else if (Qindex == "qBA") {
 
-       
-  else {
-      Qindex = Qindex + "A"
+
+    document.getElementById("Q").innerHTML =  "You need a family lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qCA") {
+
+
+    document.getElementById("Q").innerHTML =  "You need an real state lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qDA") {
+
+
+    document.getElementById("Q").innerHTML =  "You need an company lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }
+
+  else {  
+
       document.getElementById("Q").innerHTML =  dict[Qindex]
       document.getElementById("A").innerHTML=dict2[Qindex][0];
       document.getElementById("B").innerHTML=dict2[Qindex][1];
       document.getElementById("C").innerHTML=dict2[Qindex][2];
       document.getElementById("D").innerHTML=dict2[Qindex][3];
 
-    
-    }};
+    }
+
+ 
+
+};
+
 
 function B() {
 
-    if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACB" || Qindex == "qB" || Qindex == "qAB") {
-
-    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
-
-    var elem = document.getElementById('A');
-    elem.parentNode.removeChild(elem);
-    var elem = document.getElementById('B');
-    elem.parentNode.removeChild(elem);
-       var elem = document.getElementById('C');
-    elem.parentNode.removeChild(elem);
-    var elem = document.getElementById('D');
-    elem.parentNode.removeChild(elem);
-    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
+   Qindex = Qindex + "B"
+    
 
 
-  }
+  if (Qindex == "qAB") {
 
 
-    else {
-           Qindex = Qindex + "B"
-      document.getElementById("Q").innerHTML =  dict[Qindex]
-      document.getElementById("A").innerHTML=dict2[Qindex][0];
-      document.getElementById("B").innerHTML=dict2[Qindex][1];
-
-}};
-
-function C() {
-
-    if (Qindex == "qAA" || Qindex == "qACC" || Qindex == "qB" || Qindex == "qAB") {
-
-    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
-
-    var elem = document.getElementById('A');
-    elem.parentNode.removeChild(elem);
-    var elem = document.getElementById('B');
-    elem.parentNode.removeChild(elem);
-       var elem = document.getElementById('C');
-    elem.parentNode.removeChild(elem);
-    var elem = document.getElementById('D');
-    elem.parentNode.removeChild(elem);
-    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
-
-
-  }
-
-  else if (Qindex == "qABA") {
-
-    document.getElementById("Q").innerHTML =  "Based on what you have told us, we suggest you speak to a Tax Lawyer."
+    document.getElementById("Q").innerHTML =  "You need a employment lawyer."
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('B');
@@ -133,44 +132,230 @@ function C() {
 
 
 
-    document.getElementById("img").innerHTML="<img src='taxlawyer.jpg'>";
-
-  
   }
- 
 
-    else {
-           Qindex = Qindex + "B"
+    else if (Qindex == "qBB") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a family lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qCB") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a tenants rights lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qDB") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a intellectual property lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }
+
+  else {  
+
       document.getElementById("Q").innerHTML =  dict[Qindex]
       document.getElementById("A").innerHTML=dict2[Qindex][0];
-      document.getElementById("B").innerHTML=dict2[Qindex][1];}
+      document.getElementById("B").innerHTML=dict2[Qindex][1];
+      document.getElementById("C").innerHTML=dict2[Qindex][2];
+      document.getElementById("D").innerHTML=dict2[Qindex][3];
+    }
+
+ 
+
+};
+
+function C() {
+
+   Qindex = Qindex + "C"
+    
+
+
+  if (Qindex == "qAC") {
+
+
+    document.getElementById("Q").innerHTML =  "You need an employment lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }
+
+    else if (Qindex == "qBC") {
+
+
+    document.getElementById("Q").innerHTML =  "You need an estates lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qCC") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a tax lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qDC") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a tax lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }
+
+  else {  
+
+      document.getElementById("Q").innerHTML =  dict[Qindex]
+      document.getElementById("A").innerHTML=dict2[Qindex][0];
+      document.getElementById("B").innerHTML=dict2[Qindex][1];
+      document.getElementById("C").innerHTML=dict2[Qindex][2];
+      document.getElementById("D").innerHTML=dict2[Qindex][3];
+    }
+
+ 
 
 };
 
 function D() {
 
-    if (Qindex == "qAA" || Qindex == "qAB"|| Qindex == "qABD" || Qindex == "qACD" || Qindex == "qB" || Qindex == "qAB" ) {
+   Qindex = Qindex + "D"
+    
 
-    document.getElementById("Q").innerHTML =  "We reccommend you speak to Atticus Finch to help with your legal problems!"
 
+  if (Qindex == "qAD") {
+
+
+    document.getElementById("Q").innerHTML =  "You need an employment lawyer."
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('B');
     elem.parentNode.removeChild(elem);
-       var elem = document.getElementById('C');
+    var elem = document.getElementById('C');
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('D');
     elem.parentNode.removeChild(elem);
-    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
+
 
 
   }
- 
 
-    else {
-           Qindex = Qindex + "B"
+    else if (Qindex == "qBD") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a criminal defense lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qCD") {
+
+
+    document.getElementById("Q").innerHTML =  "You need an insurance lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }  else if (Qindex == "qDD") {
+
+
+    document.getElementById("Q").innerHTML =  "You need a company lawyer."
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+  }
+
+  else {  
+
       document.getElementById("Q").innerHTML =  dict[Qindex]
       document.getElementById("A").innerHTML=dict2[Qindex][0];
       document.getElementById("B").innerHTML=dict2[Qindex][1];
+      document.getElementById("C").innerHTML=dict2[Qindex][2];
+      document.getElementById("D").innerHTML=dict2[Qindex][3];
     }
+
+ 
+
 };
