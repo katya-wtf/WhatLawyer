@@ -3,81 +3,58 @@ var questionsB = new Array('Is your problem personal or corporate?', 'goodbye', 
 
 var dict = {
       q: "Are you looking for a lawyer for a person or a company?",
-    qA: "Does this have to do with family?",
-    qAA: "Does this have to do with your spouse/partner?",	
-    qAAA: "Workarea: Partner",	
-    qAAB: "Workarea: nonPartner",	
-    qAB: "Does this have to do with work?",
-    qABA: "Are you a full-time employee?",
-    qABAA: "Is this a problem with salary or benefits?",
-    qABAAA: "Does this have to do with your taxes?",
-    qABAAAA: "Workarea: Taxlawyer!",
-    qABAAAB: "Workarea: Xabilawyer",
-    qABAAB: "Workarea: NoSorry",
-    qABAB: "Are you a temporary/part-time employee?",
-    qABABA: "Workarea: partTime",
-    qABABB: "Are you an independent contractor?",
-    
-    qABB:"Is this about Property?",
-    qABBA:"Your property?",
-    qABBAA:"Do you own or rent your residence?",
-    qABBAAA: "Do you have a problem with your ownership/title?",
-    qABBAAAA: "Workarea: RealEstate",
-    qABBAAAB:"Workarea: nonRealEstate",
-    qABBAAB:"Workarea: nonOwnRealEstate",
-    qABBAB: " WOrkarea: OthersProperty",
+    qA: "Does this have to do with:",
+    qAA: "Does this have to do with your: ",
+    qAB: "Are you a:",
+    qABA: "Is your problem with:",
+    qAC:" Is this about:",
+    qACA: "Is this about your:",
+    qACAA: "Do you own or rent your residence? ",
+    qACAAA:"Do you have a problem with your:",
 
-    qB: "Is your company registered?",
-    qBA: "Workarea: nonCorporateLawyer",
-    qBB:"Workarea: CorporateLawyer",
+    qACAAAD: " Do you have a problem with your:",
+    qB: "Is your company registered as an:",
+
+
+  
 };
 
 var dict2 = {
-      q: "Are you looking for a lawyer for a person or a company?",
-    qA: new Array("Yes","No"),
-    qA:  new Array("Yes","No"),
-    qAA:  new Array("Yes","No"),	
-    qAAA:  new Array("Yes","No"),	
-    qAAB:  new Array("Yes","No"),	
-    qAB:  new Array("Yes","No"),
-    qABA:  new Array("Yes","No"),
-    qABAA:  new Array("Yes","No"),
-    qABAAA:  new Array("Yes","No"),
-    qABAAAA:  new Array("Yes","No"),
-    qABAAAB:  new Array("Yes","No"),
-    qABAAB:  new Array("Yes","No"),
-    qABAB:  new Array("Yes","No"),
-    qABABA:  new Array("Yes","No"),
-    qABABB: new Array("Yes","No"),
-    
-    qABB: new Array("Yes","No"),
-    qABBA: new Array("Yes","No"),
-    qABBAA: new Array("Yes","No"),
-    qABBAAA:  new Array("Yes","No"),
-    qABBAAAA:  new Array("Yes","No"),
-    qABBAAAB: new Array("Yes","No"),
-    qABBAAB: new Array("Yes","No"),
-    qABBAB:  new Array("Yes","No"),
+    q: "Are you looking for a lawyer for a person or a company?",
+    qA: new Array("Family","Work","Property", "Other"),
+    qAA:  new Array("Spouse/ Partner","Children", "Parents", "Other"),	
+    qAB: new Array("Full-time employee", "Temporary or parttime", "Independent Contractor", "Other"),
+    qABA: new Array("Salary or Benefits","Getting fired or laid off","Taxes","Others"),
+    qAC: new Array("Your property","Someone else's property","A disagreement about that","Others"),
+    qACA: new Array("Residence","Car","Land","Other"),
+    qACAA: new Array("Own","Rent","Both","Other"),
+    qACAAA: new Array("Ownership/title"," An insurance claim","Construction","Other"),
+    qACAAAD: new Array("Land","Neighbors","Municipal authorities","Others"),
+    qB: new Array("Limited liability company","Sole proprietorship","Not registered","Ohers"),
 
-    qB:  new Array("Yes","No"),
-    qBA:  new Array("Yes","No"),
-    qBB: new Array("Yes","No"),
+
 };
+
+
 
 var index = 0;
 var Qindex ="q";
 
 function A() {
 
-  if (Qindex == "qAA" || Qindex == "qB" || Qindex == "qABAB" || Qindex == "qABAB") {
+  if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACA" ) {
 
-    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you."
+    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you. \r\n Refresh to return to the start"
 
     var elem = document.getElementById('A');
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('B');
     elem.parentNode.removeChild(elem);
-    document.getElementById("C").innerHTML="<img src='sadOwl.jpg'>";
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
 
 
   }
@@ -89,15 +66,15 @@ function A() {
       document.getElementById("Q").innerHTML =  dict[Qindex]
       document.getElementById("A").innerHTML=dict2[Qindex][0];
       document.getElementById("B").innerHTML=dict2[Qindex][1];
+      document.getElementById("C").innerHTML=dict2[Qindex][2];
+      document.getElementById("D").innerHTML=dict2[Qindex][3];
 
-    }
-
-
-    };
+    
+    }};
 
 function B() {
 
-    if (Qindex == "qABBA" || Qindex == "qABBAA" || Qindex == "qABBAAAB" ) {
+    if (Qindex == "qAA" || Qindex == "qABA" || Qindex == "qACB") {
 
     document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you."
 
@@ -105,14 +82,95 @@ function B() {
     elem.parentNode.removeChild(elem);
     var elem = document.getElementById('B');
     elem.parentNode.removeChild(elem);
-    document.getElementById("C").innerHTML="<img src='sadOwl.jpg'>";
-
+       var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
 
 
   }
+
+
+    else {
            Qindex = Qindex + "B"
       document.getElementById("Q").innerHTML =  dict[Qindex]
       document.getElementById("A").innerHTML=dict2[Qindex][0];
       document.getElementById("B").innerHTML=dict2[Qindex][1];
 
+}};
+
+function C() {
+
+    if (Qindex == "qAA" || Qindex == "qACC") {
+
+    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you."
+
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+       var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
+
+
+  }
+
+  else if (Qindex == "qABA") {
+
+    document.getElementById("Q").innerHTML =  "Based on what you have told us, we suggest you speak to a Tax Lawyer. We reccommend you speak to XX"
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+
+
+
+    document.getElementById("img").innerHTML="<img src='taxlawyer.jpg'>";
+
+  
+  }
+ 
+
+    else {
+           Qindex = Qindex + "B"
+      document.getElementById("Q").innerHTML =  dict[Qindex]
+      document.getElementById("A").innerHTML=dict2[Qindex][0];
+      document.getElementById("B").innerHTML=dict2[Qindex][1];}
+
+};
+
+function D() {
+
+    if (Qindex == "qAA" || Qindex == "qAB"|| Qindex == "qABD" || Qindex == "qACD"  ) {
+
+    document.getElementById("Q").innerHTML =  "We're sorry, we're still working to find lawyers who can help you."
+
+    var elem = document.getElementById('A');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('B');
+    elem.parentNode.removeChild(elem);
+       var elem = document.getElementById('C');
+    elem.parentNode.removeChild(elem);
+    var elem = document.getElementById('D');
+    elem.parentNode.removeChild(elem);
+    document.getElementById("img").innerHTML="<img src='sadOwl.jpg'>";
+
+
+  }
+ 
+
+    else {
+           Qindex = Qindex + "B"
+      document.getElementById("Q").innerHTML =  dict[Qindex]
+      document.getElementById("A").innerHTML=dict2[Qindex][0];
+      document.getElementById("B").innerHTML=dict2[Qindex][1];
+    }
 };
